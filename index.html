@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auto Elite Motors</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<!-- Link para o Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+	<style>
+		.whatsapp-fixed {
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			bottom: 40px;
+			right: 40px;
+			background-color: #25D366;
+			color: #25D366;
+			border-radius: 50px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 2px 2px 3px #25D366;
+			z-index: 1000;
+		}
+
+		.whatsapp-fixed img {
+			margin-top: 16px;
+			width: 30px;
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+
+<header>
+	<div class="container">
+		<div class="logo">
+			<img src="imagens/LOGOOFICIAL.png"/>
+		</div><!--logo-->
+
+		<nav class="desktop">
+			<ul>
+				<li><a style="color:#EB2D2D;" href="index.html">Home</a></li>
+				<li><a href="venda.html">Venda</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</nav><!--desktop-->
+
+		<nav class="mobile">
+			<button id="mobile-menu-toggle">Menu</button>
+			<ul id="mobile-menu" class="hidden">
+				<li><a style="color:#EB2D2D;" href="index.html">Home</a></li>
+				<li><a href="venda.html">Venda</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</nav><!--mobile-->
+
+		<div class="clear"></div>
+	</div><!--container-->
+</header>
+
+<section class="banner">
+	<div class="container">
+		<div class="text-banner">
+			<div class="text-banner-single">Compra</div>
+			<div class="text-banner-single">Venda</div>
+			<div class="text-banner-single">Troca</div>
+			<div class="text-banner-single">Consignação</div>
+		</div><!--text-banner-->
+	</div><!--container-->
+</section><!--banner-->
+
+<section class="veiculos-destaque">
+	<div class="line-titulo">
+		<div class="ln1"></div>
+		<h2>Veículos em destaque</h2>
+	</div><!--line-titulo-->
+	<div class="container">
+		<div class="vitrine-destaque">
+			<div style="background-image:url('imagens/golf\ gti.webp');" class="carro-img"></div><!--carro-img-->
+			<div class="info-carro">
+				<h2>Volkswagen Golf GTI</h2>
+				<p>2.0 Turbo, Gasolina, 4P, Automático 2019</p>
+				<a class="btn1" href="">Mais Detalhes</a>
+			</div><!--info-carro-->
+		</div><!--vitrine-destaque-->
+
+		<div class="vitrine-destaque">
+			<div style="background-image:url('imagens/nivus.jpg');" class="carro-img"></div><!--carro-img-->
+			<div class="info-carro">
+				<h2>Volkswagen Nivus TSI</h2>
+				<p>1.0 Turbo, Flex, 4P, Automático 2022</p>
+				<a class="btn1" href="">Mais Detalhes</a>
+			</div><!--info-carro-->
+		</div><!--vitrine-destaque-->
+
+		<div class="vitrine-destaque">
+			<div style="background-image:url('imagens/jettagli.jpg');" class="carro-img"></div><!--carro-img-->
+			<div class="info-carro">
+				<h2>Volkswagen Jetta Gli</h2>
+				<p>2.0 Turbo, Gasolina, 4P, Automático 2024</p>
+				<a class="btn1" href="">Mais Detalhes</a>
+			</div><!--info-carro-->
+		</div><!--vitrine-destaque-->
+		<div class="clear"></div>
+	</div><!--container-->
+</section><!--veiculos-destaque-->
+
+<section class="servicos-descricao">
+	<div class="half1">
+		<div class="half1-wraper">
+			<h2>Serviços</h2>
+			<ul>
+				<li>Compra</li>
+				<li>Venda</li>
+				<li>Troca</li>
+				<li>Consignação</li>
+			</ul>
+			<a class="btn1" href="">Saiba mais</a>
+		</div>
+	</div><!--half-1-->
+
+	<div class="half2">
+		<h2>Depoimentos</h2>
+		<div class="depoimento-single" id="depoimento-single">
+			<p>“O Rafael foi muito atencioso, me buscou no aeroporto e garantiu toda comodidade e conforto no almoço, no transfer, na visita ao veículo e durante o test-drive”</p>
+			<div class="navigation">
+				<div class="arrows">
+					<img src="imagens/arrow-left.png" id="prev-depoimento" />
+					<img src="imagens/arrow-right.png" id="next-depoimento" />
+				</div><!--arrows-->
+				<div class="nome-depoimento">João da silva</div>
+			</div><!--navigation-->
+		</div><!--depoimento-single-->
+	</div><!--half2-->
+</section><!--servicos-descricao-->
+
+<section class="contato">
+	<div class="line-titulo">
+		<div class="ln1"></div>
+		<h2>Contato</h2>
+	</div><!--line-titulo-->
+
+	<form id="contact-form">
+		<div class="input-wraper w100">
+			<input placeholder="Nome*" type="text" required />
+		</div><!--input-wraper-->
+		
+		<div class="input-wraper w50">
+			<input placeholder="E-mail*" type="email" required />
+		</div><!--input-wraper-->
+		
+		<div class="input-wraper w50">
+			<input placeholder="Telefone*" type="text" required />
+		</div><!--input-wraper-->
+		
+		<div class="input-wraper w100">
+			<textarea placeholder="Mensagem*" required></textarea>
+		</div><!--input-wraper-->
+		
+		<div class="input-wraper w100">
+			<input class="btn1" type="submit" value="Enviar" />
+		</div><!--input-wraper-->
+		
+		<div class="clear"></div><!--clear-->
+	</form>
+
+	<!-- Mapa sem API do Google -->
+	<div id="map" style="height: 400px; width: 100%;"></div>
+
+	<div class="social-buttons">
+		<a href="https://wa.me/5511999999999" class="whatsapp-button">WhatsApp</a>
+		<a href="https://instagram.com/seu_instagram" class="instagram-button">Instagram</a>
+	</div><!--social-buttons-->
+</section><!--contato-->
+
+<footer>
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a style="color:#EB2D2D;" href="index.html">Home</a></li>
+				<li><a href="venda.html">Venda</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</nav>
+		<p>Todos os direitos reservados</p>
+		<div class="clear"></div>
+	</div><!--container-->
+</footer>
+
+<!-- Botão do WhatsApp Fixo -->
+<a href="https://wa.me/5511999999999" class="whatsapp-fixed" target="_blank">
+	<img src="imagens/whatsappicone.png" alt="WhatsApp">
+</a>
+
+<script src="js/jquery.js"></script>
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+	// Mobile menu toggle
+	document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+		var menu = document.getElementById('mobile-menu');
+		menu.classList.toggle('hidden');
+	});
+
+	// Testimonials carousel
+	var testimonials = [
+		{
+			text: "“O Rafael foi muito atencioso, me buscou no aeroporto e garantiu toda comodidade e conforto no almoço, no transfer, na visita ao veículo e durante o test-drive”",
+			name: "João da silva"
+		},
+		{
+			text: "“Excelente atendimento! Comprei meu carro com total confiança e segurança.”",
+			name: "Maria Oliveira"
+		},
+		{
+			text: "“Recomendo a todos! Atendimento de primeira e veículos de qualidade.”",
+			name: "Carlos Santos"
+		}
+	];
+	var currentTestimonial = 0;
+
+	document.getElementById('next-depoimento').addEventListener('click', function() {
+		currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+		updateTestimonial();
+	});
+
+	document.getElementById('prev-depoimento').addEventListener('click', function() {
+		currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+		updateTestimonial();
+	});
+
+	function updateTestimonial() {
+		document.querySelector('#depoimento-single p').textContent = testimonials[currentTestimonial].text;
+		document.querySelector('.nome-depoimento').textContent = testimonials[currentTestimonial].name;
+	}
+
+	// Form submission handler
+	document.getElementById('contact-form').addEventListener('submit', function(event) {
+		event.preventDefault();
+		alert('Formulário enviado com sucesso!');
+	});
+
+	// Configuração do mapa com Leaflet
+	var map = L.map('map').setView([-23.5395369, -46.5905841], 17); // Coordenadas do local
+
+	// Adicionando (camada de mapa) do OpenStreetMap
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	// Marcador no mapa
+	L.marker([-23.5395369, -46.5905841]).addTo(map)
+		.bindPopup("<b>Auto Elite Motors</b><br>Localização")
+		.openPopup();
+</script>
+
+</body>
+</html>

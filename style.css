@@ -1,0 +1,610 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    padding: 20px 2% 35px 2%;
+    height: 130px;
+    background: #333;
+    color: #fff;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+.logo img {
+    width: 400%; /* Garante que a imagem não ultrapasse o contêiner */
+    height: 400%; /* Mantém a proporção */
+    display: flex; /* Evita espaços extras ao redor da imagem */
+    object-fit: cover; /* Garante que a imagem não seja cortada */
+}
+
+
+header nav.desktop {
+    display: flex;
+    align-items: center;
+}
+
+header nav.desktop ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav.desktop ul li {
+    margin-right: 30px;
+    font-size: 23px;
+    font-style: italic;
+}
+
+header nav.desktop ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav.mobile {
+    display: none;
+}
+
+nav.mobile button {
+    background: #EB2D2D;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav.mobile ul {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 95px;
+    border-bottom: 4px solid #EB2D2D;
+    z-index: 999;
+    text-align: center;
+}
+
+nav.mobile ul li {
+    font-size: 23px;
+    padding: 20px 0;
+    font-style: italic;
+}
+
+nav.mobile ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+section.banner {
+    overflow: hidden;
+    width: 100%;
+    height: 650px;
+    background-color: black;
+    background-image: url('../imagens/911turbos.jpg');
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.text-banner {
+    padding: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.text-banner-single {
+    width: 314px;
+    font-style: italic;
+    margin-top: 30px;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 50px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 23px;
+    background-image: url('../imagens/box-text.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.text-banner .text-banner-single:nth-of-type(2) {
+    width: 200px;
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+    left: -10px;
+}
+
+.text-banner .text-banner-single:nth-of-type(3) {
+    width: 200px;
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+    left: -5px;
+}
+
+.text-banner .text-banner-single:nth-of-type(4) {
+    width: 314px;
+    font-style: italic;
+    margin-top: 30px;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 50px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 23px;
+    background-image: url('../imagens/box-text.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+section.veiculos-destaque {
+    padding: 90px 2%;
+}
+
+section.veiculos-destaque .container {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.line-titulo {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.ln1 {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 20px;
+    background: black;
+}
+
+.line-titulo h2 {
+    position: relative;
+    background: white;
+    display: inline-block;
+    text-align: center;
+    font-size: 27px;
+    padding: 0 20px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.vitrine-destaque {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.vitrine-destaque .carro-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-top: 100%;
+    border: 8px solid white;
+    background-size: 100% 100%;
+}
+
+.vitrine-destaque h2 {
+    padding-left: 8px;
+    color: black;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.vitrine-destaque p {
+    padding-top: 8px;
+    padding-left: 8px;
+    color: #353535;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.vitrine-destaque a {
+    margin-left: 8px;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    line-height: 40px;
+    background-color: #EB2D2D;
+    text-decoration: none;
+    border-bottom: 5px solid #B21E1E;
+    color: white;
+    font-size: 16px;
+    font-style: italic;
+    width: 150px;
+}
+
+.servicos-descricao {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.servicos-descricao .half1,
+.servicos-descricao .half2 {
+    width: 48%;
+}
+
+.half1 {
+    text-align: right;
+    padding: 90px 0;
+    background: #242424;
+    color: white;
+}
+
+.half1-wraper {
+    padding-right: 20%;
+    text-align: left;
+    display: inline-block;
+}
+
+.half1-wraper h2 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 32px;
+}
+
+.half1-wraper ul {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.half1-wraper li {
+    margin-left: 15px;
+}
+
+.half1-wraper a {
+    margin-left: 40px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.half2 {
+    padding: 90px 100px;
+    background: #EB2D2D;
+    color: white;
+}
+
+.half2 h2 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 32px;
+}
+
+.half2 .depoimento-single {
+    background: #111111;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.depoimento-single p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.navigation {
+    float: left;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation img {
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.nome-depoimento {
+    float: right;
+    color: #252525;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+section.contato {
+    padding: 80px 2% 0 2%;
+    background: #fff;
+}
+
+section.contato form {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+section.contato .input-wraper {
+    float: left;
+    padding: 10px;
+    margin-top: 7px;
+}
+
+section.contato input[type=text], 
+section.contato input[type=email], 
+section.contato textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    padding: 15px;
+}
+
+section.contato textarea {
+    height: 140px;
+    resize: none;
+}
+
+section.contato form .input-wraper:nth-of-type(5) {
+    text-align: center;
+}
+
+section.contato input[type=submit] {
+    border: none;
+    cursor: pointer;
+    background: #EB2D2D;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.whatsapp-button,
+.instagram-button {
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.whatsapp-button {
+    background: #1ec40f;
+}
+
+.instagram-button {
+    background: #E1306C;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 40px 2%;
+    background: #252525;
+    color: white;
+    text-align: center;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 35px;
+}
+
+footer nav ul li {
+    font-style: italic;
+    font-size: 19px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 19px;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .half1 {
+        text-align: center;
+    }
+
+    .half1-wraper {
+        text-align: left;
+        padding-right: 0;
+    }
+
+    .half1-wraper a {
+        display: block;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nome-depoimento {
+        float: left;
+        width: 100%;
+        margin: 20px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav.desktop {
+        display: none;
+    }
+
+    header nav.mobile {
+        display: block;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicos-descricao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .half1, .half2 {
+        padding: 80px 4%;
+        width: 100%;
+    }
+
+    section.banner {
+        background-size: cover;
+        background-position: 100px center;
+        height: 80vh;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .search1 {
+        display: inline-block;
+    }
+
+    .search2 {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .vitrine-venda {
+        text-align: center;
+        width: 100%;
+    }
+
+    .info-veiculo {
+        width: 100%;
+    }
+
+    .descricao-veiculo {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .descricao-veiculo a {
+        display: inline-block;
+    }
+
+    .descricao-veiculo p {
+        max-width: none;
+    }
+}
+
+@media (max-width: 580px) {
+    .text-banner {
+        padding: 30px;
+    }
+
+    .text-banner-single {
+        width: 240px;
+        font-size: 18px;
+    }
+
+    .text-banner .text-banner-single:nth-of-type(4) {
+        width: 270px;
+    }
+
+    section.veiculos-destaque .line-titulo h2 {
+        font-size: 23px;
+    }
+
+    section.veiculos-destaque .container {
+        max-width: 1000px;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .vitrine-destaque {
+        display: inline-block;
+        float: none;
+        width: 80%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .vitrine-destaque a {
+        display: inline-block;
+    }
+
+    .img-small {
+        width: 100%;
+        padding-top: 100%;
+    }
+
+    .descricao-autor2 p {
+        width: 100%;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .vitrine-destaque {
+        width: 100%;
+    }
+}

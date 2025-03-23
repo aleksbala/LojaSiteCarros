@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auto Elite Motors</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<style>
+		.container {
+			display: flex;
+		}
+		.sidebar {
+			width: 25%;
+			padding-right: 20px;
+		}
+		.vitrine-venda {
+			width: 75%;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+		.vitrine-destaque {
+			width: calc(50% - 20px);
+			background: #fff;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			overflow: hidden;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.vitrine-destaque .carro-img {
+			height: 200px;
+			background-size: cover;
+			background-position: center;
+		}
+		.vitrine-destaque .info-carro {
+			padding: 20px;
+		}
+		.btn1 {
+			display: inline-block;
+			padding: 10px 20px;
+			background: #EB2D2D;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+
+<header style="border-bottom: 3px solid #EB2D2D;">
+	<div class="container">
+		<div class="logo">
+			<img src="imagens/LOGOOFICIAL.png" width="200%" />
+		</div><!--logo-->
+
+		<nav class="desktop">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a style="color:#EB2D2D;" href="venda.html">Venda</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</nav><!--desktop-->
+
+		<nav class="mobile">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a style="color:#EB2D2D;" href="venda.html">Venda</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</nav><!--mobile-->
+
+		<div class="clear"></div>
+	</div><!--container-->
+</header>
+
+<section class="venda">
+	<div class="line-titulo">
+		<div class="ln1"></div>
+		<h2>Venda</h2>
+	</div><!--line-titulo-->
+
+	<div class="content-venda">
+		<div class="container">
+			<div class="sidebar">
+				<div class="search1">
+					<h2>Filtre por preço</h2>
+					<input type="range" min="0" max="170000" step="1000" value="85000" id="priceRange">
+					<div class="valor-pesquisa">
+						<p id="priceMin">R$0,00</p>
+						<p id="priceMax">R$170.000,00</p>
+						<div class="clear"></div>
+					</div><!--valor-pesquisa-->
+					<button id="filterPriceBtn" class="btn1">Filtrar</button>
+				</div><!--search1-->
+
+				<div class="search2">
+					<h2>Filtre por ano</h2>
+					<form>
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="item1" />
+							<label for="item1">
+								<div class="circle"></div>
+							</label><!--item-->
+							<span>Todos Os Anos</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="item2" />
+							<label for="item2">
+								<div class="circle"></div>
+							</label>
+							<span>2020 - 2025</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="item3" />
+							<label for="item3">
+								<div class="circle"></div>
+							</label>
+							<span>2010 - 2020</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="item4" />
+							<label for="item4">
+								<div class="circle"></div>
+							</label>
+							<span>2000 - 2010</span>
+						</div><!--form-venda-wraper-->
+					</form>
+				</div><!--search2-->
+
+				<div class="search3">
+					<h2>Filtre por marca</h2>
+					<form>
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="brand1" />
+							<label for="brand1">
+								<div class="circle"></div>
+							</label>
+							<span>Volkswagen</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="brand2" />
+							<label for="brand2">
+								<div class="circle"></div>
+							</label>
+							<span>Ford</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="brand3" />
+							<label for="brand3">
+								<div class="circle"></div>
+							</label>
+							<span>Chevrolet</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="brand4" />
+							<label for="brand4">
+								<div class="circle"></div>
+							</label>
+							<span>Honda</span>
+						</div><!--form-venda-wraper-->
+					</form>
+				</div><!--search3-->
+
+				<div class="search4">
+					<h2>Filtre por combustível</h2>
+					<form>
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="fuel1" />
+							<label for="fuel1">
+								<div class="circle"></div>
+							</label>
+							<span>Gasolina</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="fuel2" />
+							<label for="fuel2">
+								<div class="circle"></div>
+							</label>
+							<span>Etanol</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="fuel3" />
+							<label for="fuel3">
+								<div class="circle"></div>
+							</label>
+							<span>Diesel</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="checkbox" id="fuel4" />
+							<label for="fuel4">
+								<div class="circle"></div>
+							</label>
+							<span>Flex</span>
+						</div><!--form-venda-wraper-->
+					</form>
+				</div><!--search4-->
+			</div><!--sidebar-->
+
+			<div class="vitrine-venda">
+				<div class="vitrine-destaque">
+					<div style="background-image:url('imagens/golfgtitraseira.webp');" class="carro-img"></div><!--carro-img-->
+					<div class="info-carro">
+						<h2>Volkswagen Golf Gti</h2>
+						<p>2.0 Turbo, Gasolina, 4P, Automático 2019</p>
+						<a class="btn1" href="">Mais Detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<div class="vitrine-destaque">
+					<div style="background-image:url('imagens/jettaglitraseira.jpg');" class="carro-img"></div><!--carro-img-->
+					<div class="info-carro">
+						<h2>Volkswagen Jetta Gli</h2>
+						<p>2.0 Turbo, Gasolina, 4P, Automático 2024</p>
+						<a class="btn1" href="">Mais Detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<div class="vitrine-destaque">
+					<div style="background-image:url('imagens/nivustraseira.jpg');" class="carro-img"></div><!--carro-img-->
+					<div class="info-carro">
+						<h2>Volkswagen Nivus Tsi</h2>
+						<p>1.0 Turbo, Flex, 4P, Automático 2022</p>
+						<a class="btn1" href="">Mais Detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<div class="vitrine-destaque">
+					<div style="background-image:url('imagens/golfgtitraseira.webp');" class="carro-img"></div><!--carro-img-->
+					<div class="info-carro">
+						<h2>Volkswagen Golf Gti</h2>
+						<p>2.0 Turbo, Gasolina, 4P, Automático 2019</p>
+						<a class="btn1" href="">Mais Detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<div class="vitrine-destaque">
+					<div style="background-image:url('imagens/jettaglitraseira.jpg');" class="carro-img"></div><!--carro-img-->
+					<div class="info-carro">
+						<h2>Volkswagen Jetta Gli</h2>
+						<p>2.0 Turbo, Gasolina, 4P, Automático 2024</p>
+						<a class="btn1" href="">Mais Detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<div class="vitrine-destaque">
+					<div style="background-image:url('imagens/nivustraseira.jpg');" class="carro-img"></div><!--carro-img-->
+					<div class="info-carro">
+						<h2>Volkswagen Nivus Tsi</h2>
+						<p>1.0 Turbo, Flex, 4P, Automático 2022</p>
+						<a class="btn1" href="">Mais Detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+			</div><!--vitrine-venda-->
+
+			<div class="clear"></div>
+		</div><!--container-->
+	</div><!--content-venda-->
+</section><!--venda-->
+
+<footer>
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a style="color:#EB2D2D;" href="venda.html">Venda</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</nav>
+		<p>Todos os direitos reservados</p>
+		<div class="clear"></div>
+	</div><!--container-->
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/script.js"></script>
+<script>
+	document.getElementById('priceRange').addEventListener('input', function() {
+		var value = this.value;
+		document.getElementById('priceMin').textContent = 'R$0,00';
+		document.getElementById('priceMax').textContent = 'R$' + value.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ',00';
+	});
+
+	document.getElementById('filterPriceBtn').addEventListener('click', function() {
+		alert('Filtrando por preço até: ' + document.getElementById('priceMax').textContent);
+	});
+</script>
+</body>
+</html>
